@@ -11,13 +11,33 @@
 	</head>
 	<body>
 		<a-scene embedded arjs vr-mode-ui="enabled: false">
+			<a-assets>
+				<a-asset-item
+					id="female"
+					src="female_reproductive_organs-x_section/scene.gltf"
+				></a-asset-item>
+				<a-asset-item
+					id="spiderman"
+					src="./the_amazing_spiderman/scene.gltf"
+				></a-asset-item>
+				<a-asset-item
+					id="male"
+					src="./male_reproductive_system_-_labeled/scene.gltf"
+				></a-asset-item>
+			</a-assets>
+
 			<a-marker preset="hiro">
 				<!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-				<a-entity
+				<!-- <a-entity
 					rotation="-90 0 0"
 					position="0 0 1"
 					scale="1 1 1"
-					gltf-model="./female.gltf"
+					gltf-model="./the_amazing_spiderman/scene.gltf"
+				></a-entity> -->
+				<a-entity
+					rotation="-90 0 0"
+					scale="7 7 7"
+					gltf-model="#male"
 				></a-entity>
 			</a-marker>
 			<a-entity camera></a-entity>
